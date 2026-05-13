@@ -11,8 +11,7 @@ El flujo del proyecto incluye:
 - Descarga de datos 
 - Preprocesamiento de datos
 - Análisis exploratorio de datos (EDA)
-- Entrenamiento de modelos de Machine Learning
-- Evaluación y comparación de modelos
+- Entrenamiento de modelos de Machine Learning y evaluación y comparación de modelos
 
 Los modelos implementados son:
 
@@ -42,6 +41,11 @@ Los modelos implementados son:
 
 AL-KE-LA-PREDICCION_ARRESTOS/
 
+├── data/
+
+│   ├── 2009-1perc.zip
+
+│   ├── 2010-1perc-csv.zip
 
 ├── notebooks/
 
@@ -69,22 +73,50 @@ AL-KE-LA-PREDICCION_ARRESTOS/
 
 # Instalación del proyecto
 
-1. Clonar el repositorio
- git clone https://github.com/lauramh922-bit/al-ke-la-prediccion_arrestos
+## Requisitos Previos
 
-2. Crear entorno virtual
+- Python 3.14.4 o superior
+
+- uv (gestor de paquetes)
+
+1. Clonar el repositorio:
+
+ git clone https://github.com/lauramh922-bit/al-ke-la-prediccion_arrestos.git
+
+2. Entrar a la carpeta:
+
+cd al-ke-la-prediccion_arrestos
+
+3. Abrir el proyecto
+
+code .
+
+4. Crear entorno virtual para crear la carpeta venv/:
+
 python -m venv .venv
 
-3. Activar el entorno virtual
+4. Activar el entorno virtual para que se visualice (venv):
+
+### Windows
 .\.venv\Scripts\activate.ps1
 
-4. Iniciar el ambiente
+### Mac/Linux
+
+source venv/bin/activate
+
+
+5. Iniciar el ambiente:
+
 uv init
 
-5. Instalar dependencias
+6. Instalar dependencias:
+
+pip install uv
+
 uv sync
 
-6. Instalar el kernel
+7. Instalar el kernel:
+
 uv add ipykernel
 
 ## Nota: 
@@ -96,9 +128,9 @@ https://graphviz.org/download/?utm_source=chatgpt.com
 1. Instalar Graphviz en Windows
 : Descárgalo desde el sitio oficial:
 
-Graphviz Downloads
+[Graphviz Downloads](https://graphviz.org/download/?utm_source=chatgpt.com)
 
-Instala la versión para Windows.
+Instala la versión para Windows o MAC.
 
 2. Ubicar carpeta bin: Normalmente queda en:
 
@@ -108,8 +140,8 @@ Ahí debe existir:
 dot.exe
 
 3. Agregar Graphviz al PATH
-En Windows:
-Buscar:
+
+En Windows, buscar:
 
 Variables de entorno
 
@@ -175,7 +207,7 @@ Accuracy
 Precision
 Recall
 F1-Score
-ROC-AUC
+
 
 Librerías principales
 
@@ -192,9 +224,7 @@ Librerías principales
 
 # Consideraciones
 
-- Los datasets no se incluyen en el repositorio.
-- La carpeta .venv/ no se incluye en el repositorio.
-- Tanto la carpeta data/ como la carpeta .venv/ estan ignoradas mediante .gitignore.
+- La carpeta .venv/ no se incluye en el repositorio por lo tanto esta ignorada mediante .gitignore.
 
 Se recomienda utilizar Python 3.14.4 
 

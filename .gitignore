@@ -4,5 +4,5 @@ venv/
 .env/
 ENV
 .env
-data/
-notebooks/data/
+
+
