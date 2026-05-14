@@ -71,57 +71,13 @@ AL-KE-LA-PREDICCION_ARRESTOS/
 
 └── uv.lock
 
-# Instalación del proyecto
-
-## Requisitos Previos
+# Requisitos Previos
 
 - Python 3.14.4 o superior
 
 - uv (gestor de paquetes)
 
-1. Clonar el repositorio:
-
- git clone https://github.com/lauramh922-bit/al-ke-la-prediccion_arrestos.git
-
-2. Entrar a la carpeta:
-
-cd al-ke-la-prediccion_arrestos
-
-3. Abrir el proyecto
-
-code .
-
-4. Crear entorno virtual para crear la carpeta venv/:
-
-python -m venv .venv
-
-4. Activar el entorno virtual para que se visualice (venv):
-
-### Windows
-.\.venv\Scripts\activate.ps1
-
-### Mac/Linux
-
-source venv/bin/activate
-
-
-5. Iniciar el ambiente:
-
-uv init
-
-6. Instalar dependencias:
-
-pip install uv
-
-uv sync
-
-7. Instalar el kernel:
-
-uv add ipykernel
-
-## Nota: 
-
-Para poder utilizar el export_graphviz para la visualización de 3 árboles, es necesario instalar: 
+- Para poder utilizar el export_graphviz para la visualización de 3 árboles, es necesario instalar: 
 
 https://graphviz.org/download/?utm_source=chatgpt.com
 
@@ -132,7 +88,7 @@ https://graphviz.org/download/?utm_source=chatgpt.com
 
 Instala la versión para Windows o MAC.
 
-2. Ubicar carpeta bin: Normalmente queda en:
+2. Ubicar carpeta bin que normalmente queda en:
 
 C:\Program Files\Graphviz\bin
 
@@ -161,10 +117,56 @@ C:\Program Files\Graphviz\bin
 
 4. Guardar TODO y reiniciar VS Code
 
-Muy importante:
 
-Cerrar VS Code completamente y abrirlo nuevamente ya que la terminal necesita recargar el PATH.
+Cerrar VS Code completamente y abrirlo nuevamente para que la terminal necesita recargue el PATH.
 
+# Instalación del proyecto
+
+1. Clonar el repositorio:
+
+ git clone https://github.com/lauramh922-bit/al-ke-la-prediccion_arrestos.git
+
+2. Entrar a la carpeta:
+
+cd al-ke-la-prediccion_arrestos
+
+3. Verificar que uv esté instalado
+
+uv --version
+
+Si no está instalado:
+
+Windows:
+
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+Luego reiniciar VS Code
+
+4. Crear el entorno virtual con UV para que se cree la carpeta .venv
+
+uv venv
+
+5. Activar el entorno virtual para que se visualice (venv):
+
+### Windows
+
+.\.venv\Scripts\activate.ps1
+
+### Mac/Linux
+
+source venv/bin/activate
+
+6. Instalar dependencias:
+
+uv sync
+
+7. Instalar el kernel:
+
+uv add ipykernel
+
+8. Ejecutar el proyecto
+
+uv run main.py
 
 # Flujo del proyecto
 
@@ -186,8 +188,6 @@ Pipeline de transformación
 Se desarrollan análisis visuales y estadísticos para identificar:
 
 Distribuciones
-Correlaciones
-Outliers
 Variables relevantes
 Patrones en los datos
 
